@@ -1,16 +1,11 @@
 #include "Demo.h"
 
-
-
 Demo::Demo() {
 
 }
 
-
 Demo::~Demo() {
 }
-
-
 
 void Demo::Init() {
 	// build and compile our shader program
@@ -50,6 +45,7 @@ void Demo::DeInit() {
 // process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
 // ---------------------------------------------------------------------------------------------------------
 void Demo::ProcessInput(GLFWwindow* window) {
+
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
 		glfwSetWindowShouldClose(window, true);
 	}
@@ -687,5 +683,5 @@ GLuint Demo::LoadBMP(const char *fileName)
 
 int main(int argc, char** argv) {
 	RenderEngine &app = Demo();
-	app.Start("Grafika Komputer: Roller Coaster", 800, 600, false, true);
+	app.Start("Grafika Komputer: Roller Coaster", 700, 500, false, false);
 }
